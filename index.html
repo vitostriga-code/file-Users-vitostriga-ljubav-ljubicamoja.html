@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Za moju Barbaru ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="title">Za moju Barbaru ❤️</div>
+    <div class="subtitle">Imam nešto posebno za tebe...</div>
+
+    <div class="card">
+        <p>
+            Od kad sam te upoznao, sve je postalo ljepše... <br><br>
+            I zato te želim pitati nešto važno 😊
+        </p>
+
+        <div class="question">Hoćeš li biti moja cura? 💖</div>
+
+        <button id="yes">DA ❤️</button>
+        <button id="no">NE 🙈</button>
+    </div>
+</div>
+
+<!-- FINAL -->
+<div id="finalSection" class="hidden">
+
+    <div class="final-box">
+        <h1>❤️ Znao sam 😄 ❤️</h1>
+        <p>
+        Pružit ću ti ljubice:<br>
+        💖 Puno ljubavi  <br>
+        🤗 Pažnju svaki dan <br>
+        😊 Osmijehe stavljati na tvoje preljepo lice <br>
+        💌 Lijepe poruke za laku noć<br>
+        🫶 Podršku ti pružati uvijek <br>
+        💞 I uvijek trud oko nas
+        </p>
+    </div>
+
+    <div class="future-box">
+        💫 U našoj zajedničkoj budućnosti nas očekuje 💫
+    </div>
+
+    <div class="cards">
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">✈️ Putovanja</div>
+                <div class="flip-back">
+                    <img src="IMG_1453.JPG">
+                    <p>Zajedno ćemo putovati i stvarati uspomene</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">🍳 Kuhanje</div>
+                <div class="flip-back">
+                    <img src="IMG_1462.JPG">
+                    <p>Kuhat ćemo zajedno i smijati se</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">🛁 Jacuzzi</div>
+                <div class="flip-back">
+                    <img src="IMG_1459.JPG">
+                    <p>Opustiti se zajedno pod zvijezdama</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">🏋️ Trening</div>
+                <div class="flip-back">
+                    <img src="IMG_1454.JPG">
+                    <p>Motivirati jedno drugo i rasti zajedno</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.top = Math.random() * window.innerHeight + "px";
+    noBtn.style.left = Math.random() * window.innerWidth + "px";
+});
+
+document.getElementById("yes").addEventListener("click", () => {
+    document.querySelector(".container").style.display = "none";
+    document.getElementById("finalSection").classList.remove("hidden");
+
+    for(let i = 0; i < 80; i++){
+        let heart = document.createElement("div");
+        heart.className = "fall";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        document.body.appendChild(heart);
+    }
+});
+</script>
+
+</body>
+</html>
